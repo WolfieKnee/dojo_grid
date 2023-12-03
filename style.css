@@ -1,0 +1,179 @@
+/* set root variables */
+:root{
+    /* colours */
+    --light: #fcd612;
+    --accent-light: #f9c31a;
+    --accent-mid: #f8b71d;
+    --accent-dark: #d61a1f;
+    --dark: #000000;
+
+    /* fonts */
+    --ff-primary: "Waiting for the Sunrise", sans-serif;
+}
+
+/* Remove default margins */
+body,
+h1,
+h2,
+p
+{
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    min-height: 100vh;
+    font-family: var(--ff-primary);
+    font-size: 2rem;
+}
+
+/* default styles for elements without a class */
+header {
+    display:grid;
+    place-content:center;
+}
+
+header > div > h1{
+    font-size: 4rem;    
+}
+
+header > div > img{
+    width: 600px;
+    max-width: 100%;    
+    border-radius: 50%;
+    margin:auto;
+    
+}
+
+/* TODO consider a max with for the page, but need to keep content centred */
+body {
+    display:grid; 
+    background-color: var(--light);
+}
+
+footer{
+    display: grid;
+    width: min(95%);
+    margin-inline:auto;
+}
+
+/* Make images easier to work with */
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* utility classes */
+.bg-accent-light{
+    background: var(--accent-light);
+}
+.bg-accent-light > div > h2{
+    color: var(--accent-dark);
+}
+
+.bg-accent-mid{
+    background:var(--accent-mid);    
+}
+.bg-accent-mid > div > h2{
+    color: var(--accent-dark);
+}
+
+.bg-accent-dark{
+    background:var(--accent-dark);    
+}
+
+.bg-dark{
+    background:var(--dark);
+    color: white;
+}
+
+/* components */
+.summary-grid{
+    /* function */
+    display:grid;
+    gap: 1.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+        'one'
+        'two'
+        'three'
+        'four'
+        'five';
+    /* appearance */
+    padding-block: 2rem;
+    width: min(95%);
+    margin-inline:auto;
+}
+
+/* structure */
+.summary{
+    padding: 2rem;
+    border-radius: 1rem;
+
+}
+
+
+.summary:nth-child(1){
+    grid-area: one;
+}
+
+.summary:nth-child(2){
+    grid-area: two;
+}
+
+.summary:nth-child(3){
+    grid-area: three;
+}
+
+.summary:nth-child(4){
+    grid-area: four;
+}
+.summary:nth-child(5){
+    grid-area: five;
+}
+
+/* appearance */
+
+/* narrowest */
+@media screen and (min-width: 33em) {
+    .summary-grid {
+        grid-template-areas:
+        "one"
+        "two"        
+        "three"
+        "four"
+        "five";
+    }
+}
+
+/* narrow */
+@media screen and (min-width: 38em) {
+    .summary-grid {
+        grid-template-areas:
+        "one one"
+        "two three"
+        "two three"
+        "four four"
+        "five five"
+    }
+}
+
+/* wide */
+
+/* widest */
+@media screen and (min-width: 75em) {
+    .summary-grid {
+        grid-template-areas:
+        "one one four"
+        "two three four"
+        "two three five"        
+    }
+}

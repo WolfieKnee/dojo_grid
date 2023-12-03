@@ -1,0 +1,74 @@
+<!--Dave Wolfson 3 Dec 2023:
+    Project to learn about CSS grid and responsive design based on YouTube from Kevin Powell:https://youtu.be/rg7Fvvl3taU?si=eWwSD-Weuz4Xif4O -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Martial Arts Academy</title>
+    <!-- bring in custom google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <container>
+        <header>
+            <div>
+                <img src="/image/logo.jpg" alt="logo with a picture a tiger and a dragon, that says Traditional Budo & Combat Institution" title="The Dojo Martial Arts Academy Logo">      
+                <h1>The Dojo Martial Arts Academy</h1> 
+            </div>
+        </header>
+        <!-- TODO pull in genuine content -->
+        <main class="summary-grid">            
+            <article class="summary bg-accent-light" title="1-about">
+                <div>
+                    <h2>About</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas est iure esse eligendi aliquid reiciendis eum molestiae, eaque ex expedita et non dolores adipisci hic ad beatae reprehenderit voluptatem mollitia, temporibus commodi, officia debitis nemo. </p>
+                </div>
+                
+            </article>
+            <article class="summary bg-accent-mid" title="2-karate">
+                <!-- TODO add in an image: Flex? -->
+                <div>
+                    <h2>Karate</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit consequatur aliquam praesentium voluptate cumque consectetur quidem, officiis molestiae labore nihil esse ratione dicta recusandae quis eum, quia est deserunt illo.</p>
+                </div>
+            </article>
+            <article class="summary bg-accent-light" title="3-kick-boxing">
+                <!-- TODO add in an image: Flex? -->
+                <div>
+                    <h2>Kick Boxing</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, assumenda velit neque, voluptates tenetur iure esse eaque sequi provident pariatur tempora labore ratione eum quod, aperiam quis molestias illo alias.</p>
+                </div>                
+            </article>
+            <article class="summary bg-accent-mid" title="4-classes">
+            <div>
+                <h2>Classes</h2>
+                <!-- make this list prettier and more responsive: Flex? -->
+                <ul>
+                    <li>Monday 7-9PM: Private Lessons</li>
+                    <li>Tuesday 7-8.30PM: Kick Boxing</li>
+                    <li>Wednesday 7-8.30PM: Karate, adults and children</li>
+                    <li>Thursday 7-8.20PM: Kick Boxing, adults and children</li>
+                    <li>Friday 7-9PM: Private Lessons</li>
+                    <li>Saturday 11.30-1PM: Children's Karate</li>
+                    <li>Saturday 1-2.30PM: Adult's Karate</li>
+                </ul>
+
+            </div>                
+            </article>
+            <article class="summary bg-dark" title="5-contact">
+            <div>
+                <h2>Contact</h2>                
+                <p>TEL: 07706 417 988 <a href="https://www.facebook.com/profile.php?id=100057204440235"><img src="/image/photos-fb-logo-13.png" alt="facebook icon" height="40px"></a></p>
+            </div>                
+            </article>
+        </main>
+        <footer>
+            <div>
+                <p>(c) 2023 Dojo Martial Arts Academy</p>
+            </div>
+        </footer>
+    </container>
+</body>
+</html>
